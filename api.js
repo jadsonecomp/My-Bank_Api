@@ -93,8 +93,6 @@ api.delete("/account/:id", async (req, res) => {
         
         const accounts = data.accounts.find(account => account.id !== parseInt(req.params.id, 10) );
 
-        console.log("accounts: ", accounts);
-
         if(accounts !== undefined){
             const newData = {
                 nextId: data.nextId,
